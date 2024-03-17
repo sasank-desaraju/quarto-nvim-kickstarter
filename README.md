@@ -22,7 +22,7 @@ Download one here: <https://www.nerdfonts.com/> and set it as your terminal font
 ### Unix, Linux Installation
 
 ```bash
-git clone https://github.com/jmbuhr/quarto-nvim-kickstarter.git ~/.config/nvim
+git clone https://github.com/sasank-desaraju/quarto-nvim-kickstarter.git ~/.config/nvim
 ```
 
 ### Windows Powershell Installation
