@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.2.1](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.2.0...v3.2.1) (2024-03-18)
+
+
+### Bug Fixes
+
+* add unicorn ([42d525b](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/42d525b9c0959dce7928540fec4b6fc7902b96f9))
+
+## [3.2.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.1.2...v3.2.0) (2024-03-18)
+
+
+### Features
+
+* (lazily) enable Octo ([fba5647](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/fba5647410b82b9c624f8c817378ea1d9f82b685))
+
+
+### Bug Fixes
+
+* statusline add missing mode 's' ([3696640](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/369664060396c8010a7d227b4d2124b47866febf))
+
 ## [3.1.2](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.1.1...v3.1.2) (2024-03-13)
 
 
