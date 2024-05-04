@@ -1,5 +1,89 @@
 # Changelog
 
+## [3.8.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.7.0...v3.8.0) (2024-05-03)
+
+
+### Features
+
+* add jupytext ([d31943c](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/d31943cbf8bddb9def4f1612761d2dac69c0ffeb))
+* clear all images keybind ([6bbe017](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/6bbe017e534f4c8e98df859a2a0102bb52304ec3))
+
+
+### Bug Fixes
+
+* Correct readme typo ([#109](https://github.com/jmbuhr/quarto-nvim-kickstarter/issues/109)) ([0cb40f2](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/0cb40f2aaf8e83f88765223f852406104cca12b1))
+* dap config ([f90111e](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/f90111e5ec95f550b7619a829cc752da59f08482))
+* only enable custom code cell highlights for nvim &gt;= 0.10. fixes [#110](https://github.com/jmbuhr/quarto-nvim-kickstarter/issues/110) ([a5ad7e1](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/a5ad7e1d83981d1991dc7d486924a64741630c39))
+
+## [3.7.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.6.0...v3.7.0) (2024-04-15)
+
+
+### Features
+
+* tabularize plugin ([d63759b](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/d63759b3552dcc509de705cae0e1c6ff88be5139))
+
+
+### Bug Fixes
+
+* lazy.nvim colorscheme ([b3893cd](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/b3893cd0a57179cd937c5417d75dbe43f948c287))
+
+## [3.6.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.5.0...v3.6.0) (2024-04-13)
+
+
+### Features
+
+* preview image under cursor with &lt;leader&gt;io ([a89dc45](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/a89dc45106d687213031c7df3851ed79f1324324))
+
+## [3.5.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.4.0...v3.5.0) (2024-04-12)
+
+
+### Features
+
+* disable eob fill chars for better png previews ([12363f0](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/12363f0555845b1d5b5ba4549b58a96a2fa93e8c))
+
+
+### Bug Fixes
+
+* don't prompt for ipython or R exit/save ([a213e66](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/a213e66fbadfaa43b9fc2f011185498ba95d409e))
+* **keymap:** toggle dark/light ([21d554e](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/21d554e3f9599ab40be3d702a49f7a441b9bbb26))
+
+
+### Performance Improvements
+
+* **startup:** only load image.nvim for certain ft ([8377fd8](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/8377fd8833c293bf2ed6583db99a7932bb1fef9a))
+
+## [3.4.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.3.0...v3.4.0) (2024-04-11)
+
+
+### Features
+
+* exclude quarto docs output dir from telescope grep ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+* highlight quarto code chunks without plugin ([#103](https://github.com/jmbuhr/quarto-nvim-kickstarter/issues/103)) ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+* make animals more visible ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+
+
+### Bug Fixes
+
+* colorizer config ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+* don't show mode in cmd line, already in statusline ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+* hide more quarto output dirs from search ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+* lsp examples ([9fc14a9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/9fc14a91a4ac33d7374ac9109c82f959ba168be2))
+
+## [3.3.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.2.2...v3.3.0) (2024-04-07)
+
+
+### Features
+
+* use new default color scheme on nvim 0.10 ([486de9c](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/486de9ccc4b34364632224c5f0c8a7243d96c558))
+
+## [3.2.2](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.2.1...v3.2.2) (2024-04-03)
+
+
+### Bug Fixes
+
+* don't enable copilot by default ([2aca490](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/2aca49035e8f584b6bd741f818327b1822803a34))
+* only enabled dropar.nvim if nvim version &gt;= 0.10 ([c4b4586](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/c4b45864c811d6304ded738a463670537c6690f3))
+
 ## [3.2.1](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v3.2.0...v3.2.1) (2024-03-18)
 
 

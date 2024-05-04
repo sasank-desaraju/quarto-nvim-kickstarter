@@ -144,10 +144,8 @@ nmap('L', '<cmd>tabnext<cr>')
 local function toggle_light_dark_theme()
   if vim.o.background == 'light' then
     vim.o.background = 'dark'
-    vim.cmd [[Catppuccin mocha]]
   else
     vim.o.background = 'light'
-    vim.cmd [[Catppuccin latte]]
   end
 end
 
@@ -215,9 +213,10 @@ wk.register({
   ['<m-i>'] = { insert_r_chunk, 'r code chunk' },
   ['<cm-i>'] = { insert_py_chunk, 'python code chunk' },
   ['<m-I>'] = { insert_py_chunk, 'python code chunk' },
-  [']q'] = { ':silent cnext<cr>', 'quickfix next' },
-  ['[q'] = { ':silent cprev<cr>', 'quickfix prev' },
-  ['z?'] = { ':setlocal spell!<cr>', 'toggle spellcheck' },
+  [']q'] = { ':silent cnext<cr>', '[q]uickfix next' },
+  ['[q'] = { ':silent cprev<cr>', '[q]uickfix prev' },
+  ['z?'] = { ':setlocal spell!<cr>', 'toggle [z]pellcheck' },
+  ['zl'] = { ':Telescope spell_suggest<cr>', '[l]ist spelling suggestions' },
 }, { mode = 'n', silent = true })
 
 -- visual mode
@@ -254,11 +253,11 @@ local function new_terminal_python()
 end
 
 local function new_terminal_r()
-  new_terminal 'R'
+  new_terminal 'R --no-save'
 end
 
 local function new_terminal_ipython()
-  new_terminal 'ipython'
+  new_terminal 'ipython --no-confirm-exit'
 end
 
 local function new_terminal_julia()
@@ -342,8 +341,7 @@ wk.register({
     },
   },
   i = {
-    name = '[i]nsert',
-    i = { ':PasteImage<cr>', '[i]mage from clipboard' },
+    name = '[i]mage',
   },
   l = {
     name = '[l]anguage/lsp',
