@@ -1,24 +1,24 @@
 -- global options
 
-local animals = require('misc.style').animals
+local animals = require("misc.style").animals
 
 -- proper colors
 vim.opt.termguicolors = true
 
 -- disable fill chars (the ~ after the buffer)
-vim.o.fillchars = 'eob: '
+vim.o.fillchars = "eob: "
 
 -- more opinionated
 vim.opt.number = true -- show linenumbers
-vim.opt.mouse = 'a' -- enable mouse
+vim.opt.mouse = "a" -- enable mouse
 vim.opt.mousefocus = true
-vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
+vim.opt.clipboard:append("unnamedplus") -- use system clipboard
 
 vim.opt.timeoutlen = 400 -- until which-key pops up
 vim.opt.updatetime = 250 -- for autocommands and hovers
 
 -- don't ask about existing swap files
-vim.opt.shortmess:append 'A'
+vim.opt.shortmess:append("A")
 
 -- mode is already in statusline
 vim.opt.showmode = false
@@ -30,8 +30,8 @@ vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
 
 -- space as leader
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- smarter search
 vim.opt.ignorecase = true
@@ -45,18 +45,18 @@ vim.opt.breakindent = true
 --  See :help 'list'
 --  and :help 'listchars'
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- consistent number column
-vim.opt.signcolumn = 'yes:1'
+vim.opt.signcolumn = "yes:1"
 
 -- how to show autocomplete menu
-vim.opt.completeopt = 'menuone,noinsert'
+vim.opt.completeopt = "menuone,noinsert"
 
 -- global statusline
 vim.opt.laststatus = 3
 
-vim.cmd [[
+vim.cmd([[
 let g:currentmode={
        \ 'n'  : '%#String# NORMAL ',
        \ 'v'  : '%#Search# VISUAL ',
@@ -69,11 +69,13 @@ let g:currentmode={
        \ 'c'  : '%#CurSearch# Command ',
        \ 't'  : '%#ModeMsg# TERM ',
        \}
-]]
+]])
 
 math.randomseed(os.time())
 local i = math.random(#animals)
-vim.opt.statusline = '%{%g:currentmode[mode()]%} %{%reg_recording()%} %* %t | %y | %* %= c:%c l:%l/%L %p%% %#NonText# ' .. animals[i] .. ' %*'
+vim.opt.statusline = "%{%g:currentmode[mode()]%} %{%reg_recording()%} %* %t | %y | %* %= c:%c l:%l/%L %p%% %#NonText# "
+  .. animals[i]
+  .. " %*"
 
 -- hide cmdline when not used
 vim.opt.cmdheight = 1
@@ -86,13 +88,14 @@ vim.opt.splitbelow = true
 vim.opt.showtabline = 1
 
 --windowline
-vim.opt.winbar = '%f'
+vim.opt.winbar = "%f"
 
+-- INFO: What is this lol
 -- don't continue comments automagically
 -- https://neovim.io/doc/user/options.html#'formatoptions'
-vim.opt.formatoptions:remove 'c'
-vim.opt.formatoptions:remove 'r'
-vim.opt.formatoptions:remove 'o'
+vim.opt.formatoptions:remove("c")
+vim.opt.formatoptions:remove("r")
+vim.opt.formatoptions:remove("o")
 
 -- scroll before end of window
 vim.opt.scrolloff = 5
@@ -101,19 +104,20 @@ vim.opt.scrolloff = 5
 vim.opt.conceallevel = 0
 
 -- diagnostics
-vim.diagnostic.config {
+vim.diagnostic.config({
   virtual_text = true,
   underline = true,
   signs = true,
-}
+})
 
+-- INFO: What is this?? I don't know if I need javascript
 -- add new filetypes
-vim.filetype.add {
+vim.filetype.add({
   extension = {
-    ojs = 'javascript',
+    ojs = "javascript",
   },
-}
+})
 
 -- additional builtin vim packages
 -- filter quickfix list with Cfilter
-vim.cmd.packadd 'cfilter'
+vim.cmd.packadd("cfilter")
